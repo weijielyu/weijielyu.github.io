@@ -22,7 +22,7 @@
               <p style="text-align:center">
                 <name>Weijie Lyu</name>
               </p>
-              <p>I am a second year EECS Ph.D. student at University of California, Merced, advised by <a href="http://faculty.ucmerced.edu/mhyang/">Prof. Ming-Hsuan Yang</a>.                
+              <p>I am a third year EECS Ph.D. student at University of California, Merced, advised by <a href="http://faculty.ucmerced.edu/mhyang/">Prof. Ming-Hsuan Yang</a>.                
               </p>
               <p>I obtained my Master of Science in Computer Science degree from University of Illinois at Urbana-Champaign, advised by <a href="https://dhoiem.cs.illinois.edu/">Prof. Derek Hoiem</a>. I was also fortunate to work with <a href="https://aisecure.github.io/">Prof. Bo Li</a>.
               </p>
@@ -31,7 +31,7 @@
               </p>
               <p style="text-align:center">
                 <a href="mailto:wlyu3@ucmerced.edu">Email</a> &nbsp/&nbsp
-                <a href="media/personal/Resume_Dec__19.pdf">CV</a> &nbsp/&nbsp
+                <a href="media/personal/Resume_Jun__2_2025.pdf">CV</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?hl=en&user=EDQFItgAAAAJ">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://www.semanticscholar.org/author/Weijie-Lyu/2273929974">Semantic Scholar</a> &nbsp/&nbsp
                 <a href="https://github.com/weijielyu">GitHub</a> &nbsp/&nbsp
@@ -56,8 +56,20 @@
               </p> -->
               <heading>News</heading>
               <p>
+                <strong>[June 2024]</strong> <a href="https://www.wlyu.me/FaceLift/">FaceLift</a> is accepted by ICCV 2025. See you in Honolulu, Hawaii!
+              </p>
+              <p>
+                <strong>[May 2024]</strong> Return to Adobe Research as a research intern.
+              </p>
+              <p>
+                <strong>[May 2024]</strong> Check out <a href="https://dhmbb2.github.io/InstaInpaint_page">InstaInpaint</a>, our method for 3D scene inpainting within 0.4 seconds.
+              </p>
+              <p>
+                <strong>[May 2024]</strong> Check out <a href="https://www.arxiv.org/abs/2506.19291">HoliGS</a>, embodied 4D view synthesis from a long monocular RGB video.
+              </p>
+              <!-- <p>
                 <strong>[Dec. 2024]</strong> Check out <a href="https://www.wlyu.me/FaceLift/">FaceLift</a>, high-quality 360-degree head reconstruction from a single image.
-                </p>
+              </p>
               <p>
                 <strong>[May 2024]</strong> Join Adobe Research as a research intern.
               </p>
@@ -65,11 +77,11 @@
               <strong>[Apr. 2024]</strong> Check out <a href="https://www.gaga.gallery">Gaga</a>, our method on 3D open-world segmentation with Gaussian Splatting.
               </p>
               <p>
-                <strong>[Feb. 2024]</strong> <a href="https://arxiv.org/abs/2312.08371">PTT</a> is accepted by CVPR 2024. See you in Seattle!
+                <strong>[Feb. 2024]</strong> <a href="https://github.com/kuanchihhuang/PTT">PTT</a> is accepted by CVPR 2024. See you in Seattle!
               </p>
               <p>
               <strong>[Aug. 2023]</strong> Start my Ph.D. study at University of California, Merced.
-              </p>
+              </p> -->
             </td>
           </tr>
         </tbody></table>
@@ -167,11 +179,11 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://www.wlyu.me/FaceLift/">
-                <papertitle>FaceLift: Single Image to 3D Head with View Generation and GS-LRM</papertitle>
+                <papertitle>FaceLift: Learning Generalizable Single Image 3D Face Reconstruction from Synthetic Heads</papertitle>
               </a>
               <br><strong>Weijie Lyu</strong>, Yi Zhou, Ming-Hsuan Yang, Zhixin Shu
               <br>
-              <em>Under Review 2024</em>
+              <em>ICCV 2025</em>
               <br>
               <a href="https://www.wlyu.me/FaceLift/">Project Page</a> /
 							<a href="https://arxiv.org/abs/2412.17812">arXiv</a> /
@@ -182,8 +194,61 @@
             </td>
           </tr>
           <!-- FaceLift -->
+          <!-- InstaInpaint -->
+          <tr onmouseout="instainpaint_stop()" onmouseover="instainpaint_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='instainpaint_video'><video width=100% height=100% muted autoplay loop>
+                <source src="media/papers/instainpaint.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img id='instainpaint_image' src='media/papers/instainpaint.png' width="200">
+              </div>
+              <script type="text/javascript">
+                function instainpaint_start() {
+                  document.getElementById('instainpaint_video').style.opacity = "1";
+                }
+                function instainpaint_stop() {
+                  document.getElementById('instainpaint_video').style.opacity = "0";
+                }
+                instainpaint_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://dhmbb2.github.io/InstaInpaint_page/">
+                <papertitle>InstaInpaint: Instant 3D-Scene Inpainting with Masked Large Reconstruction Model</papertitle>
+              </a>
+              <br>Junqi You, Chieh Hubert Lin, <strong>Weijie Lyu</strong>, Zhengbo Zhang, Ming-Hsuan Yang
+              <br>
+              <em>arXiv 2025</em>
+              <br>
+              <a href="https://dhmbb2.github.io/InstaInpaint_page/">Project Page</a> /
+							<a href="https://arxiv.org/pdf/2506.10980">arXiv</a> /
+							<a href="https://github.com/dhmbb2/InstaInpaint">GitHub</a> 
+              <a href="https://github.com/dhmbb2/InstaInpaint">
+                <img src="https://img.shields.io/github/stars/dhmbb2/InstaInpaint" alt="GitHub Stars" />
+              </a>
+            </td>
+          </tr>
+          <!-- InstaInpaint -->
+          <!-- HoliGS -->
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/holigs.png' width="200"></td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://www.arxiv.org/abs/2506.19291">
+                <papertitle>HoliGS: Holistic Gaussian Splatting for Embodied View Synthesis</papertitle>
+              </a>
+              <br>Xiaoyuan Wang, Yizhou Zhao, Botao Ye, Xiaojun Shan, <strong>Weijie Lyu</strong>, Lu Qi, Kelvin C.K. Chan, Yinxiao Li, Ming-Hsuan Yang
+              <br>
+              <em>arXiv 2025</em>
+              <br>
+              <a href="https://www.arxiv.org/abs/2506.19291">arXiv</a>
+              </a>
+            </td>
+          </tr>
+          <!-- HoliGS -->
           <!-- Gaga -->
-          <tr onmouseout="gaga_stop()" onmouseover="gaga_start()">
+          <tr onmouseout="gaga_stop()" onmouseover="gaga_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='gaga_video'><video width=100% height=100% muted autoplay loop>
@@ -208,7 +273,7 @@
               </a>
               <br><strong>Weijie Lyu</strong>, Xueting Li, Abhijit Kundu, Yi-Hsuan Tsai, Ming-Hsuan Yang
               <br>
-              <em>Under Review 2024</em>
+              <em>arXiv 2024</em>
               <br>
               <a href="https://www.gaga.gallery">Project Page</a> /
 							<a href="https://arxiv.org/abs/2404.07977">arXiv</a> /
@@ -230,6 +295,7 @@
               <br>
               <em>CVPR 2024</em>
               <br>
+              <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Huang_PTT_Point-Trajectory_Transformer_for_Efficient_Temporal_3D_Object_Detection_CVPR_2024_paper.pdf">Paper</a> /
               <a href="https://arxiv.org/abs/2312.08371">arXiv</a> /
               <a href="https://github.com/kuanchihhuang/PTT">GitHub</a> 
               <a href="https://github.com/kuanchihhuang/PTT">
@@ -281,7 +347,7 @@
 							<a href="https://safebench.github.io">Project Page</a> /
               <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/a48ad12d588c597f4725a8b84af647b5-Abstract-Datasets_and_Benchmarks.html">Paper</a> /
 							<a href="https://arxiv.org/abs/2206.09682">arXiv</a> /
-              <a href="https://nips.cc/media/papers/PosterPDFs/NeurIPS%202022/55622.png?t=1669430952.996256">Poster</a> /
+              <!-- <a href="https://nips.cc/media/papers/PosterPDFs/NeurIPS%202022/55622.png?t=1669430952.996256">Poster</a> / -->
 							<a href="https://github.com/trust-ai/SafeBench">GitHub</a> 
               <a href="https://github.com/trust-ai/SafeBench">
                 <img src="https://img.shields.io/github/stars/trust-ai/SafeBench" alt="GitHub Stars" />
@@ -375,10 +441,10 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Academic Services</heading>
               <p>
-                <strong>Conference Reviewer: </strong> CVPR, ICLR, NeurIPS, Eurographics, ACCV, etc.
+                <strong>Conference Reviewer: </strong> CVPR, ICCV, ICLR, NeurIPS, Eurographics, ACCV, etc.
               </p>
               <p>
-                <strong>Journal Reviewer: </strong> TPAMI, etc.
+                <strong>Journal Reviewer: </strong> TPAMI, TMLR, etc.
               </p>
         <!-- Academic Services -->
 
@@ -398,7 +464,7 @@
 				<tbody>
 					<tr>
 						<td style="padding:0px">&nbsp;
-						  <p style="text-align:right;font-size:small;">Updated Dec. 2024. Template from <a href="https://jonbarron.info">Jon Barron</a></p>
+						  <p style="text-align:right;font-size:small;">Updated July 2025. Template from <a href="https://jonbarron.info">Jon Barron</a></p>
 						</td>
 					</tr>
 				</tbody>
