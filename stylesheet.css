@@ -74,6 +74,11 @@ a:hover {
   text-decoration: none;
 }
 
+body {
+  margin: 0;
+  padding: 20px 0 40px;
+}
+
 body,
 td,
 th,
@@ -81,7 +86,8 @@ tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 strong {
@@ -92,6 +98,12 @@ strong {
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
+  font-weight: 600;
+  display: block;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 papertitle {
@@ -128,4 +140,16 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+/* Publication row spacing */
+.publications td {
+  padding: 16px 20px !important;
+  vertical-align: middle;
+}
+
+/* GitHub badge spacing */
+.publications a img[alt="GitHub Stars"] {
+  margin-left: 6px;
+  vertical-align: middle;
 }
