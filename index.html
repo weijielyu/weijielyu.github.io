@@ -178,8 +178,25 @@
         </table>
         <table class="publications" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <!-- Edit3r -->
-          <tr bgcolor="#ffffd0">
-            <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/edit3r.png' width="200"></td>
+		  <tr onmouseout="edit3r_stop()" onmouseover="edit3r_start()" bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+			  <div class="one">
+                <div class="two" id='edit3r_video'><video width=100% height=100% muted autoplay loop>
+                <source src="media/papers/edit3r.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img id='edit3r_image' src='media/papers/edit3r.png' width="200">
+              </div>
+              <script type="text/javascript">
+                function edit3r_start() {
+                  document.getElementById('edit3r_video').style.opacity = "1";
+                }
+                function edit3r_stop() {
+                  document.getElementById('edit3r_video').style.opacity = "0";
+                }
+                editer_stop()
+              </script>
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://edit3r.github.io/edit3r/">
                 <papertitle>Edit3r: Instant 3D Scene Editing from Sparse Unposed Images</papertitle>
