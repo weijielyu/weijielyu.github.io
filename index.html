@@ -61,6 +61,7 @@
                 </font></strong>
               </p> -->
               <heading>News</heading>
+              <p><strong>[Oct. 2026]</strong> Check out <a href="https://zhuoyuanjiang.github.io/audiolift-page/">AudioLift</a>, our method for audio-driven full-head Gaussian avatars from a single portrait!</p>
               <p><strong>[Sept. 2026]</strong> <a href="https://www.wlyu.me/VGC/">VGC</a> is accepted by NeurIPS 2026.</p>
               <p><strong>[Jul. 2026]</strong> <a href="https://edit3r.github.io/edit3r/">Edit3r</a> is accepted by ECCV 2026 as an <span style="color: red;">Oral</span> presentation, with a final score of <span style="color: red;">6/5/5</span>.</p>
               <p><strong>[May 2026]</strong> Started my research internship at Apple.</p>
@@ -217,8 +218,56 @@
             </td>
           </tr>
           <!-- VGC -->
+          <!-- AudioLift -->
+          <tr onmouseout="audiolift_stop()" onmouseover="audiolift_start()" bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='audiolift_video'><video width=100% height=100% muted autoplay loop>
+                <source src="media/papers/audiolift.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img id='audiolift_image' src='media/papers/audiolift.png' width="200">
+              </div>
+              <script type="text/javascript">
+                function audiolift_start() {
+                  document.getElementById('audiolift_video').style.opacity = "1";
+                }
+                function audiolift_stop() {
+                  document.getElementById('audiolift_video').style.opacity = "0";
+                }
+                audiolift_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://zhuoyuanjiang.github.io/audiolift-page/">
+                <papertitle>AudioLift: Audio-Driven Single Image to Full-Head Gaussian Avatar via Multi-view Video Generation</papertitle>
+              </a>
+              <br>Zhuoyuan Jiang, <strong>Weijie Lyu</strong>, Xiaoyuan Wang, Tiancheng Shen, Ming-Hsuan Yang
+              <br>
+              <em>Preprint</em>
+              <br>
+              <a href="https://zhuoyuanjiang.github.io/audiolift-page/">Project Page</a> /
+              <a href="https://github.com/ZhuoyuanJiang/AudioLift">GitHub</a>
+            </td>
+          </tr>
+          <!-- AudioLift -->
+          <!-- COMPASS -->
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/COMPASS.png' width="200"></td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2610.18034">
+                <papertitle>COMPASS: Contextual Moment Prior Alignment for Generalizable AIGI Detection</papertitle>
+              </a>
+              <br>Zhan Yang, Tiancheng Shen, <strong>Weijie Lyu</strong>, Shuo Chen, Bernard Ghanem, Yibo Yang, Ming-Hsuan Yang
+              <br>
+              <em>Preprint</em>
+              <br>
+              <a href="https://arxiv.org/abs/2610.18034">arXiv</a>
+            </td>
+          </tr>
+          <!-- COMPASS -->
           <!-- Edit3r -->
-		      <tr onmouseout="edit3r_stop()" onmouseover="edit3r_start()" bgcolor="#ffffd0">
+		      <tr onmouseout="edit3r_stop()" onmouseover="edit3r_start()">
           <td style="padding:20px;width:25%;vertical-align:middle">
 			    <div class="one">
                 <div class="two" id='edit3r_video'><video width=100% height=100% muted autoplay loop>
@@ -303,7 +352,7 @@
           </tr>
           <!-- FaceCam -->
 		      <!-- Gaga -->
-          <tr onmouseout="gaga_stop()" onmouseover="gaga_start()">
+          <tr onmouseout="gaga_stop()" onmouseover="gaga_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='gaga_video'><video width=100% height=100% muted autoplay loop>
@@ -494,7 +543,8 @@
               </a>
             </td>
           </tr>
-          <tr>
+          <!-- CircuitBot -->
+          <!-- <tr>
             <td style="width:25%;vertical-align:middle"><img src='media/papers/circuitbot_1.PNG' width="200"></td>
             <td style="width:75%;vertical-align:middle">
               <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265340">
@@ -506,7 +556,7 @@
               <br>
               <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265340">Paper</a>
             </td>
-          </tr>
+          </tr> -->
         </tbody></table> 
         <!-- Publications -->
         
@@ -574,6 +624,26 @@
           </tr>
         </tbody></table> -->
         <!-- Misc. -->
+
+        <!-- Visiting Student Collaborators -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Visiting Student Collaborators</heading>
+              <p>I have been fortunate to work with and mentor these talented students.</p>
+              <p>
+                <strong><a href="https://zhuoyuanjiang.github.io/">Zhuoyuan Jiang</a>: </strong> Yale (Paper: <a href="https://zhuoyuanjiang.github.io/audiolift-page/">AudioLift</a>)
+                <br>
+                <strong><a href="https://jiagengliu02.github.io/">Jiageng Liu</a>: </strong> UMass Amherst, now a Ph.D. student at UCLA (Paper: <a href="https://edit3r.github.io/edit3r/">Edit3r</a>)
+                <br>
+                <strong><a href="https://junqiyou.com/">Junqi You</a>: </strong> SJTU, now a Ph.D. student at Princeton (Paper: <a href="https://dhmbb2.github.io/InstaInpaint_page/">InstaInpaint</a>)
+                <br>
+                <strong><a href="https://www.linkedin.com/in/xiaoyuan-isaac-wang/">Xiaoyuan Wang</a>: </strong> CMU, now a Member of Technical Staff at Moonlake AI (Papers: <a href="https://www.arxiv.org/abs/2506.19291">HoliGS</a>, <a href="https://zhuoyuanjiang.github.io/audiolift-page/">AudioLift</a>, <a href="https://www.wlyu.me/VGC/">VGC</a>)
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        <!-- Visiting Student Collaborators -->
 
         <!-- Academic Services -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
