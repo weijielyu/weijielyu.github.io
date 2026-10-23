@@ -164,3 +164,32 @@ span.highlight {
   transform: scale(1.03);
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
+/* Publication category filters */
+.pub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pub-filters button {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 4px 12px;
+  border: 1px solid #1772d0;
+  border-radius: 14px;
+  background: #fff;
+  color: #1772d0;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.pub-filters button:hover {
+  border-color: #f09228;
+  color: #f09228;
+}
+
+.pub-filters button.active {
+  background: #1772d0;
+  border-color: #1772d0;
+  color: #fff;
+}

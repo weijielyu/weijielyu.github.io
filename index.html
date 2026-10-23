@@ -178,13 +178,34 @@
             <tr>
               <td style="padding:20px 20px 10px;width:100%;vertical-align:middle">
                 <heading>Publications and Preprints</heading>
+                <div class="pub-filters">
+                  <button type="button" class="active" data-filter="all">All</button>
+                  <button type="button" data-filter="3d">3D/4D Vision</button>
+                  <button type="button" data-filter="video">Video Generation</button>
+                  <button type="button" data-filter="human">Human</button>
+                  <button type="button" data-filter="earlier">Earlier Work</button>
+                </div>
+                <script type="text/javascript">
+                  document.querySelectorAll('.pub-filters button').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                      var filter = btn.getAttribute('data-filter');
+                      document.querySelectorAll('.pub-filters button').forEach(function (b) {
+                        b.classList.toggle('active', b === btn);
+                      });
+                      document.querySelectorAll('.publications tr[data-tags]').forEach(function (row) {
+                        var tags = row.getAttribute('data-tags').split(' ');
+                        row.style.display = (filter === 'all' || tags.indexOf(filter) !== -1) ? '' : 'none';
+                      });
+                    });
+                  });
+                </script>
               </td>
             </tr>
           </tbody>
         </table>
         <table class="publications" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <!-- VGC -->
-          <tr onmouseout="vgc_stop()" onmouseover="vgc_start()" bgcolor="#ffffd0">
+          <tr data-tags="video 3d" onmouseout="vgc_stop()" onmouseover="vgc_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='vgc_video'><video width=100% height=100% muted autoplay loop>
@@ -218,7 +239,7 @@
           </tr>
           <!-- VGC -->
           <!-- AudioLift -->
-          <tr onmouseout="audiolift_stop()" onmouseover="audiolift_start()" bgcolor="#ffffd0">
+          <tr data-tags="human video 3d" onmouseout="audiolift_stop()" onmouseover="audiolift_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='audiolift_video'><video width=100% height=100% muted autoplay loop>
@@ -251,7 +272,7 @@
           </tr>
           <!-- AudioLift -->
           <!-- COMPASS -->
-          <tr>
+          <tr data-tags="human">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/COMPASS.png' width="200"></td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2610.18034">
@@ -266,7 +287,7 @@
           </tr>
           <!-- COMPASS -->
           <!-- Edit3r -->
-		      <tr onmouseout="edit3r_stop()" onmouseover="edit3r_start()">
+		      <tr data-tags="3d" onmouseout="edit3r_stop()" onmouseover="edit3r_start()">
           <td style="padding:20px;width:25%;vertical-align:middle">
 			    <div class="one">
                 <div class="two" id='edit3r_video'><video width=100% height=100% muted autoplay loop>
@@ -314,7 +335,7 @@
           </tr> -->
           <!-- RayStream -->
           <!-- FaceCam -->
-          <tr onmouseout="facecam_stop()" onmouseover="facecam_start()" bgcolor="#ffffd0">
+          <tr data-tags="human video" onmouseout="facecam_stop()" onmouseover="facecam_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='facecam_video'><video width=100% height=100% muted autoplay loop>
@@ -351,7 +372,7 @@
           </tr>
           <!-- FaceCam -->
 		      <!-- Gaga -->
-          <tr onmouseout="gaga_stop()" onmouseover="gaga_start()" bgcolor="#ffffd0">
+          <tr data-tags="3d" onmouseout="gaga_stop()" onmouseover="gaga_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='gaga_video'><video width=100% height=100% muted autoplay loop>
@@ -388,7 +409,7 @@
           </tr>
           <!-- Gaga -->
           <!-- InstaInpaint -->
-          <tr onmouseout="instainpaint_stop()" onmouseover="instainpaint_start()">
+          <tr data-tags="3d" onmouseout="instainpaint_stop()" onmouseover="instainpaint_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='instainpaint_video'><video width=100% height=100% muted autoplay loop>
@@ -425,7 +446,7 @@
           </tr>
           <!-- InstaInpaint -->
           <!-- HoliGS -->
-          <tr>
+          <tr data-tags="human 3d">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/holigs.png' width="200"></td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2506.19291">
@@ -440,7 +461,7 @@
           </tr>
           <!-- HoliGS -->
           <!-- FaceLift -->
-          <tr onmouseout="facelift_stop()" onmouseover="facelift_start()" bgcolor="#ffffd0">
+          <tr data-tags="human 3d" onmouseout="facelift_stop()" onmouseover="facelift_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='facelift_video'><video width=100% height=100% muted autoplay loop>
@@ -478,7 +499,7 @@
           </tr>
           <!-- FaceLift -->
           <!-- PTT -->
-          <tr>
+          <tr data-tags="3d">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/ptt.png' width="200"></td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Huang_PTT_Point-Trajectory_Transformer_for_Efficient_Temporal_3D_Object_Detection_CVPR_2024_paper.pdf">
@@ -496,7 +517,7 @@
             </td>
           </tr>
           <!-- PTT -->
-          <tr>
+          <tr data-tags="earlier">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/aim.png' width="200"></td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2307.01430">
@@ -510,7 +531,7 @@
               <a href="https://github.com/jessemelpolio/TreeProbe">GitHub</a>
             </td>
           </tr>
-          <tr>
+          <tr data-tags="earlier">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/mmgan.png' width="200"></td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://openaccess.thecvf.com/content/WACV2024/html/Zhu_Consistent_Multimodal_Generation_via_a_Unified_GAN_Framework_WACV_2024_paper.html">
@@ -523,7 +544,7 @@
               <a href="https://arxiv.org/abs/2307.01425">arXiv</a>
             </td>
           </tr>
-          <tr>
+          <tr data-tags="earlier">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src='media/papers/scenario_6.png' width="200"></td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://safebench.github.io">
