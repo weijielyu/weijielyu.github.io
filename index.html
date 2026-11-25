@@ -60,6 +60,7 @@
                 </font></strong>
               </p> -->
               <heading>News</heading>
+              <p><strong>[Nov. 2026]</strong> Check out <a href="https://www.wlyu.me/AnyCam/">AnyCam</a>, our method for camera-controlled video generation that uses any object in the scene to represent the camera!</p>
               <p><strong>[Nov. 2026]</strong> Check out <a href="https://gynjn.github.io/rethinking-asymmetry/">Rethinking Asymmetry</a>, our method for self-supervised camera pose and depth estimation from unposed images!</p>
               <p><strong>[Oct. 2026]</strong> Check out <a href="https://zhuoyuanjiang.github.io/audiolift-page/">AudioLift</a>, our method for audio-driven full-head Gaussian avatars from a single portrait!</p>
               <p><strong>[Sept. 2026]</strong> <a href="https://www.wlyu.me/VGC/">VGC</a> is accepted by NeurIPS 2026.</p>
@@ -205,6 +206,40 @@
           </tbody>
         </table>
         <table class="publications" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- AnyCam -->
+          <tr data-tags="video 3d" onmouseout="anycam_stop()" onmouseover="anycam_start()" bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='anycam_video'><video width=100% height=100% muted autoplay loop>
+                <source src="media/papers/anycam.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img id='anycam_image' src='media/papers/anycam.jpg' width="200">
+              </div>
+              <script type="text/javascript">
+                function anycam_start() {
+                  document.getElementById('anycam_video').style.opacity = "1";
+                }
+                function anycam_stop() {
+                  document.getElementById('anycam_video').style.opacity = "0";
+                }
+                anycam_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://www.wlyu.me/AnyCam/">
+                <papertitle>AnyCam: Anything Can Represent Camera for Video Generation</papertitle>
+              </a>
+              <br><strong>Weijie Lyu</strong>, Zhixin Shu, Yuntian Ke, Ming-Hsuan Yang
+              <br>
+              <em>Preprint</em>
+              <br>
+              <a href="https://www.wlyu.me/AnyCam/">Project Page</a> /
+              <a href="https://youtu.be/vWr0S4sPfqw">Video</a> /
+              <a href="https://github.com/weijielyu/AnyCam">GitHub</a>
+            </td>
+          </tr>
+          <!-- AnyCam -->
           <!-- VGC -->
           <tr data-tags="video 3d" onmouseout="vgc_stop()" onmouseover="vgc_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
